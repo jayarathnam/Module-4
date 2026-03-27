@@ -1,40 +1,46 @@
-# Exp.No:20  
-## SEB - ARITHMETIC CALCULATION USING CLASS
+# Exp.No:4e
 
----
+## SEB - EXCEPTION HANDLING
 
 ### AIM  
-To write a Python program to perform addition and division operations using a class. The class should be named `Saveetha`, and the function names should be `setvalues` (to set `a` and `b` values), `add`, and `div`. The program should handle the following cases:  
-- `choice 1` → Perform addition  
-- `choice 2` → Perform division  
-- `choice 0` → Exit  
-- For other choices, print 'Invalid choice'
+Write a python program to Place result="You can't divide with 0" to the right place so that program avoids ZeroDivisionError.
 
 ---
 
 ### ALGORITHM
+1.Input: Accept two numbers from the user — numerator and denominator.
 
-1. Begin the program.  
-2. Create a class `Saveetha`.  
-3. Define the following methods inside the `Saveetha` class:  
-   - `__init__(self)`: Initializes `a` and `b` to zero.  
-   - `setvalues(self, a, b)`: Sets the values of `a` and `b`.  
-   - `add(self)`: Performs the addition operation.  
-   - `div(self)`: Performs the division operation. If `b` is zero, returns an error message for division by zero.  
-4. Create a `main()` function.  
-5. Take input from the user for the values of `a` and `b` using `setvalues(a, b)` method.  
-6. Use a `while True` loop to repeatedly ask the user for a choice:  
-   - If the choice is 1, call the `add()` method and print the result.  
-   - If the choice is 2, call the `div()` method and print the result. Handle division by zero.  
-   - If the choice is 0, print "Exiting!" and exit the loop.  
-   - If the choice is not 1, 2, or 0, print "Invalid choice".  
-7. Terminate the program.
+ -Try Block:
+
+-Attempt to divide the numerator by the denominator.
+
+-If successful, store the result.
+
+2.Except Block (ZeroDivisionError):
+
+ -If the denominator is 0, catch the ZeroDivisionError.
+
+ -Set result = "You can't divide with 0".
+
+3.Output:
+
+ -Print the result (either the division result or the error message).
+
+
+---
+
 
 ---
 
 ### PROGRAM
 
 ```
+a=int(input())
+b=int(input())
+try:
+    print(a/b)
+except ZeroDivisionError:
+    print("You can't divide with 0")
 
 
 
@@ -42,4 +48,8 @@ To write a Python program to perform addition and division operations using a cl
 
 ### OUTPUT
 
+![Screenshot (202)](https://github.com/user-attachments/assets/b2ed7b82-9818-4cc5-9856-c19a987a975b)
+
+
 ### RESULT
+Thus,the program to Place result="You can't divide with 0" to the right place so that program avoids ZeroDivisionError was implemented and executed successfully.
